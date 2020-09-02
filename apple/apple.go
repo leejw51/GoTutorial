@@ -1,5 +1,6 @@
-package main
+package main 
 import "fmt"
 func main() {
-	fmt.Println("apple ][")
+	ShowPear()
+	fmt.Println("OK")
 }
