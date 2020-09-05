@@ -2,13 +2,13 @@ package main
 
 import (
 	"fmt"
-	sprite "example.com/sprite/x/sprite"
-	fruit "example.com/sprite/x/sprite/fruit"
+	engine "sprite/engine"
+	fruit "sprite/engine/fruit"
 )
 
 func main() {
 	fmt.Println("OK")
-	var a= sprite.MyHelloWorld()
+	var a= engine.MyHelloWorld()
 	fmt.Printf("%s\n", a)
 	fruit.FruitHelloWorld()
 }

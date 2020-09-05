@@ -2,7 +2,7 @@ package fruit
 
 import (
 	"fmt"
-	food "example.com/sprite/x/sprite/food"
+	food "sprite/engine/food"
 )
 
 func FruitHelloWorld() {

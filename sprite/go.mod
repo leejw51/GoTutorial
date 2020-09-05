@@ -1,3 +1,3 @@
-module example.com/sprite
+module sprite
 
 go 1.15
