@@ -15,10 +15,14 @@ type Ramen struct {
 func (r Ramen) price() int64 {
 	return r.ramenKind*20000
 }
+
+func tell(f Food) {
+	fmt.Printf("price=%d\n", f.price())
+}
 func TestInterface() {
 	fmt.Println("test interface")
 	a := Apple {appleKind:1}
 	r := Ramen {ramenKind:2}
-	fmt.Printf("apple %v\n", a)
-	fmt.Printf("ramen %v\n", r)
+	tell(a)
+	tell(r)
 }
