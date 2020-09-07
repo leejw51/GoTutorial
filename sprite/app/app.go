@@ -16,5 +16,5 @@ func main2() {
 }
 
 func main() {
-	sample.TestMap()
+	sample.TestInterface()
 }
