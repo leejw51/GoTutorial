@@ -21,12 +21,12 @@ type Fruit struct {
 	name  string
 }
 
+func change(output *Fruit) {
+	output.name = "pear"
+}
 func main() {
 	//	sample.TestInterface()
 	var a = Fruit{price: 0, kind: 1, name: "apple"}
-	var b = a
-	b.name = "pear"
-	fmt.Println(a)
-	fmt.Println(b)
+	change(&a)
 	fmt.Println(a)
 }
