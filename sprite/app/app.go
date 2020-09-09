@@ -1,4 +1,4 @@
-package main 
+package main
 
 import (
 	"fmt"
@@ -9,12 +9,24 @@ import (
 
 func main2() {
 	fmt.Println("OK")
-	var a= engine.MyHelloWorld()
+	var a = engine.MyHelloWorld()
 	fmt.Printf("%s\n", a)
 	fruit.FruitHelloWorld()
 	sample.MySample2()
 }
 
+type Fruit struct {
+	price int
+	kind  int
+	name  string
+}
+
 func main() {
-	sample.TestInterface()
+	//	sample.TestInterface()
+	var a = Fruit{price: 0, kind: 1, name: "apple"}
+	var b = a
+	b.name = "pear"
+	fmt.Println(a)
+	fmt.Println(b)
+	fmt.Println(a)
 }
