@@ -1,21 +1,14 @@
 package main
 
 import (
+	"encoding/hex"
 	"fmt"
-	engine "sprite/engine"
-	fruit "sprite/engine/fruit"
-	sample "sprite/engine/sample"
+
+	"github.com/tendermint/tendermint/crypto/tmhash"
 )
 
-func main2() {
-	fmt.Println("OK")
-	var a = engine.MyHelloWorld()
-	fmt.Printf("%s\n", a)
-	fruit.FruitHelloWorld()
-	sample.MySample2()
-}
-
 func main() {
-	//	sample.TestInterface()
-	sample.TestPointer()
+	var b = []byte("helllo")
+	var a = tmhash.Sum(b)
+	fmt.Printf("hash = %s\n", hex.EncodeToString(a))
 }
