@@ -28,7 +28,8 @@ func (t *AppleCider) Get() string {
 }
 func New() *AppleCider {
 	userType := &AppleCider{}
-	userType.Getter = interface{}(userType).(Getter)
+	//userType.Getter = interface{}(userType).(Getter)
+	userType.Getter = userType
 	return userType
 }
 

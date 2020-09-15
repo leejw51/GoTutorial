@@ -23,5 +23,5 @@ func main3() {
 }
 
 func main() {
-	sample.TestOverride2()
+	sample.TestOverride()
 }
