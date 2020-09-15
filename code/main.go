@@ -15,5 +15,11 @@ func main() {
 	src := []byte("Hello")
 	encodedStr := hex.EncodeToString(src)
 
-	fmt.Printf("%s\n", encodedStr)
+	a, e := hex.DecodeString(encodedStr)
+	if e != nil {
+		b := hex.EncodeToString(a)
+
+		fmt.Printf("%s\n", encodedStr)
+		fmt.Printf("%s\n", b)
+	}
 }
