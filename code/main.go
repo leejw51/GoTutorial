@@ -8,7 +8,7 @@ import (
 	apple "testcode/engine/fruit/apple"
 )
 
-func main() {
+func main2() {
 	engine.EngineHello()
 	fruit.TestFruit()
 	apple.TestApple()
@@ -22,4 +22,8 @@ func main() {
 		fmt.Printf("%s\n", encodedStr)
 		fmt.Printf("%s\n", b)
 	}
+}
+
+func main() {
+	engine.JsonMain()
 }
