@@ -16,7 +16,7 @@ type response2 struct {
 	Fruits []string `json:"fruits"`
 }
 
-func JsonMain() {
+func JsonMain2() {
 
 	bolB, _ := json.Marshal(true)
 	fmt.Println(string(bolB))
@@ -75,4 +75,15 @@ func JsonMain() {
 	enc := json.NewEncoder(os.Stdout)
 	d := map[string]int{"apple": 5, "lettuce": 7}
 	enc.Encode(d)
+}
+
+func JsonMain() {
+	a := map[string]int{"apple": 5, "lettuce": 7}
+	showa, _ := json.Marshal(a)
+	fmt.Println(string(showa))
+
+	b := []string{"apple", "peach", "pear"}
+	showb, _ := json.Marshal(b)
+	fmt.Println(string(showb))
+
 }
