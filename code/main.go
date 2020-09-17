@@ -22,8 +22,9 @@ func main2() {
 		fmt.Printf("%s\n", encodedStr)
 		fmt.Printf("%s\n", b)
 	}
+	engine.JsonMain()
 }
 
 func main() {
-	engine.JsonMain()
+	engine.HackerMain()
 }
