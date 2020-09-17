@@ -1,22 +1,29 @@
 package engine
 
-import "fmt"
+import (
+	"crypto/sha256"
+	"fmt"
+)
 
 func HackerMain() {
 	fmt.Println("hacking")
-	a := []int64{0, 0, 0}
-	fmt.Printf("count=%d\n", len(a))
+	s := byte('0')
+	e := byte('9')
+	a := []byte{s, s, s}
+
 	current := len(a) - 1
 
 	done := false
 	for !done {
+
+		bs := sha256.Sum256(a)
+		fmt.Printf("%v %x\n", a, bs)
 		a[current] = a[current] + 1
-		fmt.Printf("%v\n", a)
 
 		for j := current; j >= 0; j-- {
 
-			if a[j] > 2 {
-				a[j] = 0
+			if a[j] > e {
+				a[j] = s
 				if j-1 >= 0 {
 					a[j-1] = a[j-1] + 1
 				} else {
@@ -27,4 +34,5 @@ func HackerMain() {
 		}
 
 	}
+	fmt.Printf("count=%d  character %c~%c  byte %d~%d\n", len(a), s, e, s, e)
 }
