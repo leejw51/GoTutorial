@@ -28,3 +28,16 @@ func main2() {
 func main() {
 	engine.HackerMain()
 }
+
+func main4() {
+	var b int64 = 2_0000_0002
+	var a float64 = float64(b) / 10000_0000.0
+	fmt.Printf("%d %.8f\n", b, a)
+}
+
+func main5() {
+	var a int64 = 2_0000_0020
+	b := a / 1_0000_0000
+	c := a % 1_0000_0000
+	fmt.Printf("%d.%08d\n", b, c)
+}
