@@ -5,20 +5,18 @@ import (
 	"log"
 	"net"
 
-	"google.golang.org/grpc"
 	pb "example.com/test_grpc/proto"
+	"google.golang.org/grpc"
 )
 
 const (
 	port = ":50051"
 )
 
-// server is used to implement helloworld.GreeterServer.
 type server struct {
 	pb.UnimplementedGreeterServer
 }
 
-// SayHello implements helloworld.GreeterServer
 func (s *server) SayHello(ctx context.Context, in *pb.HelloRequest) (*pb.HelloReply, error) {
 	log.Printf("Received: %v", in.GetName())
 	return &pb.HelloReply{Message: "Hello " + in.GetName()}, nil

@@ -6,8 +6,8 @@ import (
 	"os"
 	"time"
 
-	"google.golang.org/grpc"
 	pb "example.com/test_grpc/proto"
+	"google.golang.org/grpc"
 )
 
 const (
@@ -16,7 +16,6 @@ const (
 )
 
 func main() {
-	// Set up a connection to the server.
 	conn, err := grpc.Dial(address, grpc.WithInsecure(), grpc.WithBlock())
 	if err != nil {
 		log.Fatalf("did not connect: %v", err)
@@ -24,7 +23,6 @@ func main() {
 	defer conn.Close()
 	c := pb.NewGreeterClient(conn)
 
-	// Contact the server and print out its response.
 	name := defaultName
 	if len(os.Args) > 1 {
 		name = os.Args[1]
