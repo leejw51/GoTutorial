@@ -23,10 +23,12 @@ func main2() {
 		fmt.Printf("%s\n", b)
 	}
 	engine.JsonMain()
+	
 }
 
 func main() {
-	engine.HackerMain()
+	//engine.HackerMain()
+	apple.TestApple()
 }
 
 func main4() {
