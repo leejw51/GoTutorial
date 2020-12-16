@@ -1,7 +1,9 @@
 package main
 
-import "fmt"
+import (
+	u "example.com/test_file/util"
+)
 
 func main() {
- fmt.Println("hello")
+	u.WriteFileLog("a.txt", "hello")
 }
