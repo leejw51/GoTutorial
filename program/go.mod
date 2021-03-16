@@ -1,3 +1,3 @@
-module github.com/leejw51/GoTutorial/program
+module my
 
 go 1.15
