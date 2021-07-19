@@ -23,5 +23,6 @@ func main3() {
 }
 
 func main() {
+	sample.G_name = "screen"
 	sample.TestOverride()
 }

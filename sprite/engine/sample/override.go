@@ -33,7 +33,10 @@ func New() *AppleCider {
 	return userType
 }
 
+var G_name = "robot"
+
 func TestOverride() {
 	userType := New()
 	fmt.Println(userType.GetName()) // user string
+	fmt.Printf("g_name= %s\n", G_name)
 }
