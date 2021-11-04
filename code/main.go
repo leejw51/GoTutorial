@@ -27,7 +27,6 @@ func main2() {
 }
 
 func main() {
-	//engine.HackerMain()
 	apple.TestApple()
 }
 
